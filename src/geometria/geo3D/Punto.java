@@ -11,6 +11,11 @@ public class Punto extends geometria.geo2D.Punto{
         super(x, y);
         this.z = z;
     }
+    //costruttore per coprire il caso Punto sia 2D
+    public Punto(double x, double y) {
+        super(x, y);
+        this.z = 0;
+    }
     //metodi
     public double z(){ return this.z;}
     //
