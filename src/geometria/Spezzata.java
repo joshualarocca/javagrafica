@@ -1,7 +1,6 @@
 package geometria;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import geometria.geo3D.Punto;
 import geometria.geo3D.Segmento;
