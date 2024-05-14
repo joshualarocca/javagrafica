@@ -28,5 +28,16 @@ public class App {
 
         System.out.println("\nSpezzata 3D lunga "+miaSpezzata3D.lunghezza()+" in " +miaSpezzata3D.quanti()+" segmenti:\n");
         System.out.println(miaSpezzata3D.toString());
+
+        Punto daEliminare = new geometria.geo3D.Punto(miaRandom.nextDouble()*100,miaRandom.nextDouble()*100,miaRandom.nextDouble()*100);
+
+        System.out.println("Ho eliminato il Punto più vicino a " 
+            + daEliminare.toString()
+            + " ed era "+
+            miaSpezzata3D.eliminaP(daEliminare));
+
+        System.out.println("\nSpezzata 3D lunga "+miaSpezzata3D.lunghezza()+" in " +miaSpezzata3D.quanti()+" segmenti:\n");
+        System.out.println(miaSpezzata3D.toString());
+
     }
 }
