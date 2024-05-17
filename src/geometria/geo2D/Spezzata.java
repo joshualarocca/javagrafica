@@ -64,6 +64,20 @@ public class Spezzata {
         return eliminato;
     }
 
+    //restituisce il punto più lontano dal punto specificato
+    public double max_dist(Punto p){
+        double max=0;
+        for (Punto punto : punti) if (punto.distanza(p)>max) max=punto.distanza(p);
+        return max;
+    }
+    public double max_coord(){
+        double max=0;
+        for (Punto punto : punti) {
+            if (Math.abs(punto.x())>max) max=Math.abs(punto.x());
+            if (Math.abs(punto.y())>max) max=Math.abs(punto.y());
+        }
+        return max;
+    }
 
     public double getx(int punto) {
         return punti.get(punto).x();
@@ -76,7 +90,7 @@ public class Spezzata {
     public void visualizza2D() {
         EventQueue.invokeLater(() -> {
             try {
-                Frame frame =new Frame(punti);
+                Frame frame =new Frame(punti, max_coord());
                 frame.setVisible(true);
             } catch (Exception e) {
             }

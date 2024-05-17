@@ -20,6 +20,6 @@ public class Punto {
     @Override
     public String toString() {
         DecimalFormat f = new DecimalFormat("##.00");
-        return f.format(this.x)+"-"+f.format(this.y);
+        return f.format(this.x)+"  "+f.format(this.y);
     }
 }

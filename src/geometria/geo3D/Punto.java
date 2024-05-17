@@ -25,6 +25,6 @@ public class Punto extends geometria.geo2D.Punto{
     @Override
     public String toString() {
         DecimalFormat f = new DecimalFormat("##.00");
-        return super.toString()+"-"+f.format(this.z);
+        return super.toString()+" "+f.format(this.z);
     }
 }
