@@ -1,6 +1,6 @@
 package geometria.geo2D;
 
-import geometria.geo2D.ui.Frame;
+import geometria.geo2D.ui.Cornice;
 import java.awt.EventQueue;
 import java.util.ArrayList;
 
@@ -70,6 +70,8 @@ public class Spezzata {
         for (Punto punto : punti) if (punto.distanza(p)>max) max=punto.distanza(p);
         return max;
     }
+
+    //restituisce la coordinata piu grande in valore assoluto
     public double max_coord(){
         double max=0;
         for (Punto punto : punti) {
@@ -90,7 +92,7 @@ public class Spezzata {
     public void visualizza2D() {
         EventQueue.invokeLater(() -> {
             try {
-                Frame frame =new Frame(punti, max_coord());
+                Cornice frame =new Cornice(punti, 50);
                 frame.setVisible(true);
             } catch (Exception e) {
             }

@@ -2,10 +2,14 @@ package geometria.geo2D;
 
 import java.text.DecimalFormat;
 
+/**
+ *
+ * @author Giuseppe Panebianco
+ */
 public class Punto {
     //attributi
-    private double x;
-    private double y;
+    private final double x;
+    private final double y;
     //costruttori
     public Punto(double x, double y) {
         this.x = x;
